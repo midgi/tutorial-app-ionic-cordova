@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { MathCalculator } from '@ionic-native/math-calculator/ngx';
+import { Platform } from '@ionic/angular';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +16,7 @@ import { MathCalculator } from '@ionic-native/math-calculator/ngx';
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
     MathCalculator,
+    Platform,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent],
